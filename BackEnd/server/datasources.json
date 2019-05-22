@@ -1,0 +1,1 @@
+{"db":{"name":"db","connector":"memory"},"FotoContainer":{"name":"FotoContainer","connector":"loopback-component-storage","provider":"filesystem","root":"./tempFiles"},"mongoDs":{"host":"127.0.0.1","port":27017,"url":"","database":"FotoVideo","password":"","name":"mongoDs","user":"","connector":"mongodb"}}

@@ -1,0 +1,21 @@
+{
+    "name": "Perdorues",
+    "plural": "Perdoruesit",
+    "base": "User",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "Emer": {
+            "type": "string"
+        },
+        "Mbiemer": {
+            "type": "string"
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}
