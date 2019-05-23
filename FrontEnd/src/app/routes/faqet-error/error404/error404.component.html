@@ -1,3 +1,20 @@
-<p>
-  error404 works!
-</p>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="nukgjendet-card">
+    <mat-card-header>
+      <div mat-card-avatar class="nukgjendet-header-image"></div>
+      <mat-card-title>NOT FOUND</mat-card-title>
+      <mat-card-subtitle>Faqja që kërkoni nuk existon</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/img/404-not-found.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        Kontrolloni linkun [AddressBar] dhe nëse mendoni se kjo faqe është shfaqur gabimisht, ju lutemi lajmëroni administratorin.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button routerLink="/login" *ngIf="!isAuthenticated">LOGIN</button>
+      <button mat-button routerLink="/register" *ngIf="!isAuthenticated">REGISTER</button>
+      <button mat-button routerLink="/main/home" *ngIf="isAuthenticated">HOME</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

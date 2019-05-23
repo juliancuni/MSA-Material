@@ -10,9 +10,9 @@ export class HomeComponent implements OnInit {
   constructor(
     private _perdorues: PerdoruesApi
   ) {
-    this._perdorues.find().subscribe((res) => {
-      console.log(res)
-    })
+    // this._perdorues.find().subscribe((res) => {
+    //   console.log(res)
+    // })
   }
 
   ngOnInit() {

@@ -1,25 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { Routes, RouterModule } from '@angular/router';
+import { SharedModule } from '../../shared/shared.module';
 
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
-const routes: Routes = [
-  { path: '', redirectTo: 'login' },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-];
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent],
+  declarations: [
+    LoginComponent, 
+    RegisterComponent, 
+    DashboardComponent
+  ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
+    SharedModule,
   ],
   exports: [
-    RouterModule,
   ]
 })
 export class FaqetthjeshtaModule { }

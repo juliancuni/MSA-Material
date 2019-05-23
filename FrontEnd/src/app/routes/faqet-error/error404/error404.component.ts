@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PerdoruesApi } from '../../../shared/sdk/services/custom'
 @Component({
   selector: 'app-error404',
   templateUrl: './error404.component.html',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Error404Component implements OnInit {
 
-  constructor() { }
+  isAuthenticated: boolean = this._perdorues.isAuthenticated();
+
+  constructor(
+    private _perdorues: PerdoruesApi
+  ) { }
 
   ngOnInit() {
   }

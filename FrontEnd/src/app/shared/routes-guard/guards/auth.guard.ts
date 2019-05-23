@@ -7,11 +7,8 @@ export class AuthGuard implements CanActivate {
     constructor(private _auth: PerdoruesApi, private _router: Router) { }
 
     canActivate() {
-        if (this._auth.isAuthenticated()) {
-            return true;
-        } else {
-            this._router.navigate(['/login']);
-            return false;
-        }
+        if (this._auth.isAuthenticated()) return true;
+        this._router.navigate(['/login']);
+        return false;
     }
 }

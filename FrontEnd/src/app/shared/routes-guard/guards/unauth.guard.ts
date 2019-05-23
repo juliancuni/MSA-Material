@@ -9,11 +9,8 @@ export class UnauthGuard implements CanActivate {
         private _router: Router) { }
 
     canActivate() {
-        if (!this._auth.isAuthenticated()) {
-            return true;
-        } else {
-            this._router.navigate(['/']);
-            return false;
-        }
+        if (!this._auth.isAuthenticated()) return true;
+        this._router.navigate(['/main/home']);
+        return false;
     }
 }

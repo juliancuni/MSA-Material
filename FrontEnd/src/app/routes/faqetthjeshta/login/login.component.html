@@ -1,3 +1,26 @@
-<p>
-  login works!
-</p>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card>
+    <form [formGroup]="loginForm" (ngSubmit)="login(credentials)">
+      <mat-card-header>
+        <img src="/assets/img/logo/ms-logo.svg" alt="" style="filter: invert(1); width: 200px;">
+        <!-- filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%); -->
+      </mat-card-header>
+      <br />
+      <mat-card-content>
+        <formly-form [form]="loginForm" [fields]="loginFormFields" [model]="credentials"></formly-form>
+      </mat-card-content>
+      <mat-card-actions fxLayout="row">
+        <div fxFlex="8">
+          <mat-spinner diameter="25" *ngIf="loading"></mat-spinner>
+        </div>
+        <div fxFlex="42">
+            <span style="color: red;">{{loginErrs}}</span>
+        </div>
+        <div fxFlex="50">
+          <button mat-raised-button color="primary" [disabled]="loading || loginForm.invalid">Login</button>
+          <a mat-raised-button color="secondary" routerLink="/register">Register</a>
+        </div>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
