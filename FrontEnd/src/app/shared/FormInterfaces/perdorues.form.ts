@@ -58,7 +58,7 @@ export class PerdoruesFormModel {
                             // avoid displaying the message error when values are empty
                             || (!value.passwordConfirm || !value.password);
                     },
-                    message: 'Password != Perserit_Pass',
+                    message: 'Password-et nuk jane njelloj',
                     errorPath: 'passwordConfirm',
                 },
             },
