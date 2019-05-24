@@ -1,0 +1,33 @@
+<div fxLayout="column" fxFlexFill>
+    <!-- <div fxLayout="row" fxLayout.lt-sm="column" fxFlex="90%"> -->
+    <!-- <div class="vertical-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="50%">
+            <div class="box-title">Controls</div>
+            <div class="action-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">
+                <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto"
+                    (click)='toggleType()'>{{(type == "component") ? "Switch to directive" : "Switch to component"}}
+                </div>
+                <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto"
+                    (click)='toggleDisabled()'>Toggle disabled state</div>
+                <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto"
+                    (click)='toggleMultiUpload()'>
+                    {{(config.maxFiles !== 1) ? "Upload single file" : "Upload multiple files"}}</div>
+                <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto"
+                    (click)='toggleAutoReset()'>{{config.autoReset ? "Turn off auto reset" : "Turn on auto reset"}}
+                </div>
+                <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto"
+                    (click)='toggleClickAction()'>
+                    {{config.clickable ? "Turn off click action" : "Turn on click action"}}</div>
+                <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto"
+                    (click)='resetDropzoneUploads()'>Reset upload area</div>
+            </div>
+        </div> -->
+    <!-- <div fxLayout="column" fxLayoutAlign="stretch" fxFlex> -->
+    <!-- <div>Dropzone</div> -->
+    <!-- <div fxLayout="column" fxLayoutAlign="stretch" fxFlex> -->
+    <dropzone [config]="config" [disabled]="disabled" fxFlex="90%"
+        [message]="'Drag&Drop Fotografi/Video Ose kliko per te zgjedhur filet.'" (init)="onUploadInit($event)" (error)="onUploadError($event)"
+        (success)="onUploadSuccess($event)" [useDropzoneClass]></dropzone>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+</div>
